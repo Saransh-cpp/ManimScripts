@@ -13,3 +13,5 @@ These files contain the code for animated content created using opensource Manim
 
 For detailed installation instructions visit https://github.com/3b1b/manim
 
+I will soon add the link for all the media elements used in the code, till then if you want to run the code you can comment them out.
+
