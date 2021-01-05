@@ -1,0 +1,541 @@
+from manimlib.imports import *
+class project(Scene):
+    CONFIG={
+        "camera_config": {"background_color":BLUE},
+    }
+
+    def construct(self):
+
+        g=NumberPlane()
+        self.add_sound("./project1a.m4a")
+        image=ImageMobject("./road1.png")
+        image.scale(5.6)
+
+        car = ImageMobject("./car.png")
+        car.move_to(1*DOWN+10*LEFT)
+        car1 = ImageMobject("./car.png")
+        car1.move_to(1*DOWN+3.5*LEFT)
+        car2 = ImageMobject("./car.png")
+        car2.move_to(1*DOWN+10*RIGHT)
+
+        thoughtcloud1 = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        thoughtcloud1.move_to(1*UP+3.5*LEFT)
+        thoughtcloud1text1 = TextMobject("Oh Hi!").set_color(BLACK)
+        thoughtcloud1text1.move_to(3.5*LEFT+1.25*UP)
+
+        thoughtcloud2 = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        thoughtcloud2.scale(2)
+        thoughtcloud2.move_to(3.5*LEFT+1.8*UP)
+        thoughtcloud2text1 = TextMobject(" Welcome back\\\\"
+        "to the episode\\\\",
+        "of why we should\\\\",
+        "invest our money").set_color(BLACK)
+        thoughtcloud2text1.move_to(3.5*LEFT+2.5*UP)
+        
+        house = ImageMobject("./house.png")
+        house.scale(2)
+        house.move_to(5*RIGHT+0.8*UP)
+
+        housetext1 = TextMobject("The very", " FIRST ", "thing you should know\\\\",
+        "is that keeping your money at home\\\\",
+        "is a", " LOSS ", "that you make!")
+        housetext1[0].set_color(BLACK)
+        housetext1[1].set_color(RED)
+        housetext1[2].set_color(BLACK)
+        housetext1[3].set_color(BLACK)
+        housetext1[4].set_color(BLACK)
+        housetext1[5].set_color(RED)
+        housetext1[6].set_color(BLACK)
+        housetext1.move_to(2.5*LEFT+3*UP)
+
+        cash = ImageMobject("./money-bag.png")
+        cash.move_to(1*RIGHT+0.25*UP)
+
+        arr = Arrow(LEFT,RIGHT).set_color(BLACK)
+        arr.move_to(2.5*RIGHT+0.25*UP)
+
+        b1 = Brace(cash, LEFT).set_color(RED)
+        b1text = b1.get_text("LOSS").set_color(RED)
+
+        trees = ImageMobject("./trees.png")
+        trees.scale(8)
+        trees.move_to(0.52*UP)
+
+        thinker = ImageMobject("./thinker.png")
+        thinker.move_to(1*RIGHT+0.25*UP)
+
+        thoughtcloud3 = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        thoughtcloud3.move_to(1*RIGHT+2*UP)
+        thoughtcloud3text1 = TextMobject("BUT\\\\", "WHY!").set_color(BLACK)
+        thoughtcloud3text1.move_to(1*RIGHT+2.25*UP)
+
+        housetext2 = TextMobject("BECAUSE", " OF ", "INFLATION!")
+        housetext2[2].set_color(RED)
+        housetext2[0].set_color(BLACK)
+        housetext2[1].set_color(BLACK)
+        housetext2.move_to(3*UP)
+        housetext2.scale(2)
+
+        explaintext1 = TextMobject("For those of you who don't\\\\" ,"know what ","is", " INFLATION ")
+        explaintext2 = TextMobject("Inflation ", "is basically a\\\\" "general increase in price")
+        explaintext3 = TextMobject("4-6 percent")
+        explaintext4 = TextMobject("every year in\\\\"," INDIA")
+        explaintext1[1].set_color(BLACK)
+        explaintext1[0].set_color(BLACK)
+        explaintext1[2].set_color(BLACK)
+        explaintext1[3].set_color(RED)
+        explaintext2[0].set_color(RED)
+        explaintext2[1].set_color(BLACK)
+        explaintext3.set_color(RED)
+        explaintext4[0].set_color(BLACK)
+        explaintext4[1].set_color(RED)
+        explaintext1.move_to(3*RIGHT+3*UP)
+        explaintext2.next_to(explaintext1, DOWN, buff=0.5)
+        
+        arrex = Arrow(LEFT,RIGHT).set_color(BLACK)
+        arrex.next_to(explaintext3, RIGHT, buff=0.3)
+        explaintext4.next_to(arrex, RIGHT, buff= 0.3)
+
+        confused = ImageMobject("./confused.png")
+        confused.scale(1.5)
+        thoughtcloud4 = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        thoughtcloud4text1 = TextMobject(" What is\\\\","that?").set_color(BLACK)
+        thoughtcloud4text1.move_to(2*LEFT+3.3*UP)
+        oh = ImageMobject("./oh.png")
+        oh.scale(1.5)
+        confused.move_to(2*LEFT+0.5*UP)
+        oh.move_to(2*LEFT+0.5*UP)
+        thoughtcloud4.next_to(confused, UP, buff=0.01)
+
+        product1 = ImageMobject("./product.png")
+        product1a = ImageMobject("./product.png")
+        product1.move_to(6*LEFT+3*UP)
+        product1a.move_to(10*LEFT+3*UP)
+        product1.scale(0.5)
+        product1a.scale(0.5)
+        product1text = TextMobject("Rs 100").set_color(BLACK)
+        product1text.next_to(product1, DOWN, buff=0.1)
+        arrp=Arrow(LEFT,RIGHT).set_color(BLACK)
+        arrp.scale(0.75)
+        arrp.next_to(product1, RIGHT,buff=0.1)
+        product2 = ImageMobject("./product.png")
+        product2a = ImageMobject("./product.png")
+        product2.next_to(arrp,RIGHT,buff=0.1)
+        product2a.move_to(10*LEFT+3*UP)
+        product2.scale(0.5)
+        product2a.scale(0.5)
+        product2text = TextMobject("Rs 104-106").set_color(BLACK)
+        product2text.next_to(product2, DOWN, buff=0.1)
+        arrtext= TextMobject("In a year").set_color(BLACK)
+        arrtext.scale(0.5)
+        arrtext.next_to(arrp, UP, buff=0.1)
+        frame1 = SurroundingRectangle(explaintext3, buff=0.1).set_color(RED)
+        frame2 = SurroundingRectangle(product2text, buff=0.1).set_color(RED)
+        t = TextMobject("Saving your"," money ")
+        t1 = TextMobject("equals to", " LOSS ")
+        t[0].set_color(BLACK)
+        t[1].set_color(RED)
+        t1[0].set_color(BLACK)
+        t1[1].set_color(RED)
+        t.move_to(4.5*LEFT+1.25*UP)
+        tarr = Arrow(UP,DOWN).set_color(BLACK)
+        tarr.scale(0.5)
+        tarr.next_to(t,DOWN,buff=0.1)
+        t1.next_to(tarr,DOWN,buff=0.1)
+
+        thoughtcloud5 = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        thoughtcloud5.text = TextMobject("Oh, now I\\\\",
+        "get it")
+        thoughtcloud5.next_to(oh,UP,buff=0.01)
+        thoughtcloud5text1 = TextMobject("Oh! now I\\\\",
+        "get it\\\\",
+        "a bit").set_color(BLACK)
+        thoughtcloud5text1.move_to(2*LEFT+3.3*UP)
+        thoughtcloud5text1.scale(0.75)
+
+        point = SVGMobject("./point.svg").set_stroke(BLACK)
+        point.move_to(5*LEFT+3*UP)
+        invest1 = TextMobject("So, you need to", " INVEST")
+        invest2 = TextMobject("Investing").set_color(RED)
+        invest3 = TextMobject("Saves from\\\\"," inflation")
+        invest4 = TextMobject("Generates\\\\"," additional \\\\","revenue")
+        invest1[0].set_color(BLACK)
+        invest1[1].set_color(RED)
+        invest3[0].set_color(BLACK)
+        invest3[1].set_color(RED)
+        invest4[0].set_color(BLACK)
+        invest4[1].set_color(RED)
+        invest4[2].set_color(BLACK)
+        arrin1 = Arrow(LEFT,RIGHT).set_color(BLACK)
+        arrin2 = Arrow(UP,DOWN).set_color(BLACK)
+        arrin3 = Arrow(UP,DOWN).set_color(BLACK)
+        arrin4 = Arrow(LEFT,RIGHT).set_color(BLACK)
+        arrin1.scale(0.5)
+        arrin2.scale(0.5)
+        arrin3.scale(0.5)
+        arrin4.scale(0.5)
+        moneye = ImageMobject("./moneye.png")
+        invest2.move_to(1.5*RIGHT+2.5*UP)
+        arrin1.next_to(invest2, RIGHT, buff=0.1)
+        invest3.next_to(arrin1, RIGHT, buff=0.1)
+        arrin2.next_to(invest2, DOWN, buff=0.1)
+        invest4.next_to(arrin2, DOWN, buff=0.1)
+        arrin3.next_to(invest3, DOWN, buff=0.1)
+        arrin4.next_to(invest4, RIGHT, buff=0.1)
+        invest1.move_to(3.5*RIGHT+3.5*UP)
+        moneye.next_to(arrin4, RIGHT, buff=0.1)
+
+        scene2 = ImageMobject("./scene1.png")
+        scene2.scale(8)
+        scene2.move_to(3*UP)
+        parents = ImageMobject("./parents.png")
+        parents.move_to(3*DOWN)
+        kids = ImageMobject("./kids.png")
+        kids.move_to(3*DOWN+2*RIGHT)
+        extext1 = TextMobject("Let's take an example").set_color(BLACK)
+        extext1.scale(1.5)
+        extext1.move_to(3*UP+3*LEFT)
+        exname1 = TextMobject("Adi").set_color(BLACK)
+        exname2 = TextMobject("Arav").set_color(BLACK)
+        exarr = Arrow(DOWN,UP).set_color(BLACK)
+        exarr1 = Arrow(DOWN,UP).set_color(BLACK)
+        exarr.scale(0.5)
+        exarr1.scale(0.5)
+        exarr.move_to(1.7*RIGHT+1.5*DOWN)
+        exarr1.move_to(2.3*RIGHT+1.5*DOWN)
+        exname1.next_to(exarr, UP, buff=0.1)
+        exname2.next_to(exarr1, UP, buff=0.1)
+        parentscloud = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        parentcloudtext = TextMobject("Save some\\\\"
+         "money kids").set_color(BLACK)
+        parentcloudtext.scale(0.75)
+        parentcloudtext.move_to(0.7*DOWN)
+        parentscloud.next_to(parents, UP, buff=0.1)
+        kidcloud = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        kidcloud.next_to(kids, UP, buff=0.1)
+        kidcloudtext=TextMobject("Yes! we\\\\", "will save").set_color(BLACK)
+        kidcloudtext.scale(0.75)
+        kidcloudtext.move_to(2*RIGHT+0.5*DOWN)
+        extext2 = TextMobject("So, they fixed that they will\\\\",
+        "save ", "Rs 500 ", "for next ","20 years")
+        extext2[0].set_color(BLACK)
+        extext2[1].set_color(BLACK)
+        extext2[2].set_color(RED)
+        extext2[3].set_color(BLACK)
+        extext2[4].set_color(RED)
+        extext2.move_to(3*UP+3*LEFT)
+
+
+        shout = ImageMobject("./shout.png")
+        shout.move_to(3*DOWN+10*RIGHT)
+        adi = ImageMobject("./thinker.png")
+        adi.flip(RIGHT)
+        adi.move_to(3*DOWN+0.5*RIGHT)
+        shout1 = ImageMobject("./shout.png")
+        shout1.move_to(3*DOWN+2.5*RIGHT)
+        shout1text = TextMobject("Invest\\\\", 
+        "your\\\\"
+        "money").set_color(BLACK)
+        shout1text.scale(0.75)
+        shoutcloud = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        shoutcloud.next_to(shout1, UP, buff=0.1)
+        shout1text.move_to(0.65*DOWN+2.5*RIGHT)
+        adicloud = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        adicloud.next_to(adi, UP, buff=0.1)
+        adicloudtext = TextMobject("Hmmmm\\\\",
+        "I will\\\\",
+        "invest").set_color(BLACK)
+        adicloudtext.move_to(0.5*RIGHT+0.6*DOWN)
+        adicloudtext.scale(0.75)
+
+        montext1 = TextMobject("Present age").set_color(BLACK)
+        montext1a = TextMobject("20").set_color(RED)
+        montext1.move_to(2.5*UP+2*LEFT)
+        montext1arr1 = Arrow(LEFT,RIGHT).set_color(BLACK)
+        montext1arr1.scale(0.5)
+        montext1arr1.next_to(montext1, RIGHT, buff=0.1)
+        montext1a.next_to(montext1arr1, RIGHT, buff=0.1)
+        montext1arr2 = Arrow(LEFT,RIGHT).set_color(BLACK)
+        montext1arr2.scale(0.5)
+        montext1arr2.next_to(montext1a, RIGHT, buff=0.1)
+        monname = TextMobject("Arav").set_color(BLACK)
+        monname1 = TextMobject("Adi").set_color(BLACK)
+        monname.move_to(3*RIGHT+3.5*UP)
+        monname1.move_to(5.5*RIGHT+3.5*UP)
+        montext2 = TextMobject("Rs 500 per month").set_color(BLACK)
+        montext2a = TextMobject("1 year").set_color(RED)
+        montext2.move_to(1.5*UP+3.5*LEFT)
+        montext2arr1 = Arrow(LEFT, RIGHT).set_color(BLACK)
+        montext2arr1.scale(0.5)
+        montext2arr1.next_to(montext2, RIGHT, buff=0.1)
+        montext2a.next_to(montext2arr1, RIGHT, buff=0.1)
+        montext2arr2 = Arrow(LEFT, RIGHT).set_color(BLACK)
+        montext2arr2.scale(0.5)
+        montext2arr2.next_to(montext2a, RIGHT, buff=0.1)
+        montext3 = TextMobject("For"," 20 ","years")
+        montext3[0].set_color(BLACK)
+        montext3[1].set_color(RED)
+        montext3[2].set_color(BLACK)
+        montext3.move_to(0.5*UP+0.7*LEFT)
+        montext3arr1 = Arrow(LEFT, RIGHT).set_color(BLACK)
+        montext3arr1.scale(0.5)
+        montext3arr1.next_to(montext3, RIGHT, buff=0.1)
+        montext4 = TextMobject("At the age of"," 60")
+        montext4[0].set_color(BLACK)
+        montext4[1].set_color(RED)
+        montext4.move_to(0.5*DOWN+1.1*LEFT)
+        montext4arr1 = Arrow(LEFT,RIGHT)
+        montext4arr1.scale(0.5).set_color(BLACK)
+        montext4arr1.next_to(montext4, RIGHT, buff=0.1)
+        
+
+
+        paisa1 = TextMobject("0").set_color(RED)
+        paisa2 = TextMobject("0").set_color(RED)
+        paisa3 = TextMobject("12(500)").set_color(RED)
+        paisa4 = TextMobject("12(500)").set_color(RED)
+        paisa3a = TextMobject("6,000").set_color(RED)
+        paisa4a = TextMobject("6,000").set_color(RED)
+        paisa5 = TextMobject("20(6,000)").set_color(RED)
+        paisa6 = TextMobject("20(6,000)").set_color(RED)
+        paisa5a = TextMobject("1,20,000").set_color(RED)
+        paisa6a = TextMobject("1,20,000").set_color(RED)
+        paisa6b = TextMobject("7,00,000").set_color(RED)
+        paisa7 = TextMobject("2.4 lakh").set_color(RED)
+        paisa8 = TextMobject("28 lakh").set_color(RED)
+        paisa1.move_to(3*RIGHT+2.5*UP)
+        paisa2.move_to(5.5*RIGHT+2.5*UP)
+        paisa3.move_to(3*RIGHT+1.5*UP)
+        paisa4.move_to(5.5*RIGHT+1.5*UP)
+        paisa5.move_to(3*RIGHT+0.5*UP)
+        paisa6.move_to(5.5*RIGHT+0.5*UP)
+        paisa7.move_to(3*RIGHT+0.5*DOWN)
+        paisa8.move_to(5.5*RIGHT+0.5*DOWN)
+        paisa4a.move_to(5.5*RIGHT+1.5*UP)
+        paisa3a.move_to(3*RIGHT+1.5*UP)
+        paisa5a.move_to(3*RIGHT+0.5*UP)
+        paisa6a.move_to(5.5*RIGHT+0.5*UP)
+        paisa6b.move_to(5.5*RIGHT+0.5*UP)
+
+        a1 = TextMobject("BUT WAIT!").set_color(RED)
+        a1.move_to(0.5*DOWN)
+        a1.scale(1.5)
+        f1 = SurroundingRectangle(paisa6b, buff=0.1).set_color(BLACK)
+        f1text = TextMobject("Because of investment").set_color(BLACK)
+        f1text.scale(0.5)
+        f1text.next_to(f1, DOWN, buff=0.1)
+        f2 = SurroundingRectangle(paisa8, buff=0.1).set_color(BLACK)
+        a2 = TextMobject("The investment rate is to be assumed at 15 percent").set_color(BLACK)
+        a2.scale(0.8)
+        a2.move_to(1.5*DOWN+2*LEFT)
+
+        building = ImageMobject("./building.png")
+        building.scale(7.5)
+        building.move_to(1.7*UP)
+        fincar1 = ImageMobject("./car.png")
+        fincar1.move_to(10*LEFT+3*DOWN)
+        fincar = ImageMobject("./car.png")
+        fincar.move_to(3*LEFT+3*DOWN)
+        fincar2 = ImageMobject("./car.png")
+        fincar2.move_to(10*RIGHT+3*DOWN)
+        fincloud = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        fincloud.scale(2)
+        fincloud1 = SVGMobject("./cloud1.svg").set_stroke(BLACK)
+        fincloud1.scale(2.2)
+        fincloud.next_to(fincar, UP, buff=0.1)
+        fincloud1.next_to(fincar, UP, buff=0.1)
+        fincloudtext1 = TextMobject("You must be wondering\\\\",
+        "that which investment\\\\",
+        "platform provide returns\\\\",
+         "upto 15 percent").set_color(BLACK)
+        fincloudtext1.move_to(3*LEFT+0.7*UP)
+        fincloudtext1.scale(0.75)
+        fincloudtext2 = TextMobject("So yes, we are talking\\\\",
+        "about the smartest\\\\",
+        "investment options which\\\\",
+        "have up to 16 percent\\\\" 
+        "returns as average\\\\",
+        "return!!").set_color(BLACK)
+        fincloudtext2.move_to(3*LEFT+0.9*UP)
+        fincloudtext2.scale(0.75)
+        fincloudtext3 = TextMobject("Don't worry we will\\\\",
+        "be disclosing it in our\\\\",
+        "future episodes!!").set_color(BLACK)
+        fincloudtext4 = TextMobject("This is the simple reason\\\\",
+        "why one have to invest\\\\",
+        "money and long term is\\\\",
+        "the ideal option for one").set_color(BLACK)
+        fincloudtext3.move_to(3*LEFT+0.9*UP)
+        fincloudtext3.scale(0.9)
+        fincloudtext4.move_to(3*LEFT+0.9*UP)
+        fincloudtext4.scale(0.75)
+        
+        thank = TextMobject("Thank you!!").set_color(BLACK)
+        thank.scale(2)
+        thank.move_to(2*UP)
+
+
+
+
+        
+
+
+
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        self.add(image)
+        self.play(FadeInFromDown(trees))
+        self.play(ReplacementTransform(car, car1))
+        self.play(Write(thoughtcloud1))
+        self.play(Write(thoughtcloud1text1))
+        self.play(FadeOut(thoughtcloud1text1), ReplacementTransform(thoughtcloud1, thoughtcloud2))
+        self.play(Write(thoughtcloud2text1, run_time=4))
+        self.play(FadeOut(thoughtcloud2), FadeOut(thoughtcloud2text1), ReplacementTransform(car1, car2))
+        self.play(AnimationGroup(Write(housetext1, run_time=5), FadeInFromDown(cash), GrowArrow(arr), FadeInFromDown(house), GrowFromCenter(b1), FadeIn(b1text), lag_ratio=0.5))
+        self.play(FadeOut(cash), FadeOut(arr), FadeOut(b1), FadeOut(b1text), FadeOut(housetext1), FadeInFromDown(thinker), Write(thoughtcloud3), Write(thoughtcloud3text1))
+        self.play(FadeOut(thoughtcloud3, run_time=0.5), FadeOut(thoughtcloud3text1, run_time=0.5))
+        self.play(GrowFromCenter(housetext2))
+        self.play(FadeOut(housetext2, run_time=0.5), FadeOut(trees, run_time=0.5), FadeOut(thinker, run_time=0.5), FadeOut(house, run_time=0.5))
+        self.play(FadeInFromDown(confused, run_time=0.5), Write(thoughtcloud4, run_time=0.5), Write(thoughtcloud4text1, run_time=0.5))
+        self.play(Write(explaintext1, run_time=3))
+        self.wait(3)
+        self.play(ReplacementTransform(explaintext1.copy(), explaintext2))
+        self.wait(4)
+        self.play(Write(explaintext3, run_time=3))
+        self.play(GrowArrow(arrex))
+        self.play(Write(explaintext4))
+        self.wait()
+        self.play(FadeOut(thoughtcloud4), FadeOut(thoughtcloud4text1))
+        self.add(product1a, product2a)
+        self.play(ReplacementTransform(product1a, product1))
+        self.play(Write(product1text))
+        self.play(GrowArrow(arrp))
+        self.play(Write(arrtext))
+        self.play(ReplacementTransform(product2a, product2))
+        self.play(Write(product2text))
+        self.wait()
+        self.play(ShowCreation(frame1))
+        self.play(ReplacementTransform(frame1, frame2))
+        self.play(FadeOut(confused), GrowFromEdge(oh, RIGHT, run_time=0.5))
+        self.play(Write(t))
+        self.play(GrowArrow(tarr))
+        self.play(Write(t1))
+        self.play(FadeOut(frame2), Write(thoughtcloud5), Write(thoughtcloud5text1), FadeOut(product1), FadeOut(product2), FadeOut(arrp), FadeOut(arrtext), FadeOut(product1text), FadeOut(product2text))
+        self.play(FadeOut(explaintext1), FadeOut(arrex), FadeOut(explaintext2), FadeOut(explaintext4), FadeOut(explaintext3))
+        self.play(AnimationGroup(Write(invest1,run_time=2), Write(point),lag_ratio=0.1 ))
+        self.play(Write(invest2))
+        self.play(GrowArrow(arrin1), GrowArrow(arrin2))
+        self.play(Write(invest3), Write(invest4))
+        self.play(GrowArrow(arrin3), GrowArrow(arrin4))
+        self.play(GrowFromEdge(moneye, RIGHT, run_time=0.5))
+        self.play(FadeOut(image), FadeOut(point), FadeOut(thoughtcloud5), FadeOut(thoughtcloud5text1), FadeOut(oh), FadeOut(moneye), FadeOut(arrin1), FadeOut(arrin2), FadeOut(t), FadeOut(t1), FadeOut(tarr), FadeOut(arrin3) ,
+        FadeOut(arrin4), FadeOut(invest1), FadeOut(invest2), FadeOut(invest3), FadeOut(invest4), FadeIn(scene2))
+        self.play(Write(extext1))
+        self.play(GrowFromEdge(kids, RIGHT, run_time=0.5))
+        self.wait()
+        self.play(GrowArrow(exarr), FadeIn(exname1))
+        self.play(FadeOut(exarr), FadeOut(exname1))
+        self.play(GrowArrow(exarr1), FadeIn(exname2))
+        self.play(FadeOut(exarr1), FadeOut(exname2))
+        self.play(GrowFromEdge(parents, LEFT, run_time=0.5))
+        self.play(Write(parentscloud), Write(parentcloudtext))
+        self.play(FadeOut(parents), FadeOut(parentscloud), FadeOut(parentcloudtext))
+        self.play(Write(kidcloud), Write(kidcloudtext))
+        self.play(FadeOut(kids), FadeOut(kidcloud), FadeOut(kidcloudtext))
+        self.add(shout)
+        self.play(ReplacementTransform(extext1, extext2))
+        self.wait()
+        self.play(ReplacementTransform(shout, shout1))
+        self.wait()
+        self.play(Write(shoutcloud))
+        self.play(Write(shout1text))
+        self.wait()
+        self.play(GrowFromEdge(adi, LEFT, run_time=0.5))
+        self.play(FadeOut(shoutcloud), FadeOut(shout1text))
+        self.play(Write(adicloud))
+        self.play(Write(adicloudtext))
+        self.wait()
+        self.play(FadeOut(shout1), FadeOut(adi), FadeOut(adicloud), FadeOut(adicloudtext), FadeOut(extext2))
+        self.play(FadeIn(kids))
+        self.play(Write(monname))
+        self.play(Write(monname1))
+        self.play(Write(montext1))
+        self.play(GrowArrow(montext1arr1))
+        self.play(Write(montext1a))
+        self.play(GrowArrow(montext1arr2))
+        self.play(Write(paisa1))
+        self.play(Write(paisa2))
+        self.wait()
+        self.play(Write(montext2))
+        self.play(GrowArrow(montext2arr1))
+        self.play(Write(montext2a))
+        self.play(GrowArrow(montext2arr2))
+        self.play(Write(paisa3))
+        self.play(Write(paisa4))
+        self.play(ReplacementTransform(paisa3, paisa3a))
+        self.play(ReplacementTransform(paisa4, paisa4a))
+        self.play(Write(montext3))
+        self.play(GrowArrow(montext3arr1))
+        self.play(Write(paisa5))
+        self.play(Write(paisa6))
+        self.play(ReplacementTransform(paisa5, paisa5a))
+        self.play(ReplacementTransform(paisa6, paisa6a))
+        self.wait(8)
+        self.play(GrowFromCenter(a1))
+        self.play(ReplacementTransform(paisa6a, paisa6b))
+        self.play(FadeOut(a1))
+        self.play(ShowCreation(f1), FadeIn(f1text))
+        self.wait(8)
+        self.play(Write(montext4, run_time=6))
+        self.play(GrowArrow(montext4arr1))
+        self.play(Write(paisa8, run_time=4))
+        self.play(Write(paisa7, run_time=6))
+        self.play(ReplacementTransform(f1, f2))
+        self.play(Write(a2, run_time=3))
+        self.play(FadeOut(scene2, run_time=0.5), FadeOut(paisa1, run_time=0.5), FadeOut(paisa2, run_time=0.5), FadeOut(kids, run_time=0.5), FadeOut(paisa3a, run_time=0.5), FadeOut(paisa4a, run_time=0.5), FadeOut(paisa5a, run_time=0.5), FadeOut(paisa6b, run_time=0.5), FadeOut(paisa7, run_time=0.5), FadeOut(paisa8, run_time=0.5),
+        FadeOut(monname, run_time=0.5), FadeOut(monname1, run_time=0.5), FadeOut(f2, run_time=0.5), FadeOut(f1text, run_time=0.5), FadeOut(a2, run_time=0.5), FadeOut(montext1, run_time=0.5), FadeOut(montext1a, run_time=0.5), FadeOut(montext1arr1, run_time=0.5), FadeOut(montext1arr2, run_time=0.5), 
+        FadeOut(montext2, run_time=0.5), FadeInFromDown(building, run_time=0.5), FadeOut(montext2a, run_time=0.5), FadeOut(montext2arr1, run_time=0.5),  FadeOut(montext2arr2, run_time=0.5),  FadeOut(montext3, run_time=0.5),  FadeOut(montext3arr1, run_time=0.5), FadeOut(montext4, run_time=0.5),  FadeOut(montext4arr1, run_time=0.5))      
+        self.play(ReplacementTransform(fincar1,fincar))
+        self.play(Write(fincloud, run_time=0.5))
+        self.play(Write(fincloudtext1, run_time=6))
+        self.wait()
+        self.play(ReplacementTransform(fincloud,fincloud1), ReplacementTransform(fincloudtext1,fincloudtext2))
+        self.wait(7)
+        self.play(ReplacementTransform(fincloudtext2,fincloudtext3))
+        self.wait(5)
+        self.play(ReplacementTransform(fincloudtext3,fincloudtext4))
+        self.wait(7)
+        self.play(FadeOut(fincloud1), FadeOut(fincloudtext4), ReplacementTransform(fincar,fincar2))
+        self.play(Write(thank))
+        self.play(FadeOut(thank))
+
+
+
+
+
+
+
+
+
+
+
+        
