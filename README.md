@@ -4,7 +4,7 @@ These files contain the code for mathematical animations created using Manim. Ju
 
 ## Requirements to run the code
 
-1. Python
+1. Python 3.6 - see https://github.com/3b1b/manim/issues/1349
 2. Pycairo corresponding to the version of python you have
 3. MikTex
 4. FFmpeg
