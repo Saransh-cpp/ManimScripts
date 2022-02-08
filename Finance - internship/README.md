@@ -4,7 +4,7 @@ These files contain the code for animated content created using opensource Manim
 
 ## Requirements to run the code
 
-1. Python installed
+1. Python 3.6 - see https://github.com/3b1b/manim/issues/1349
 2. Pycairo related to the version of python you have
 3. MikTex
 4. FFmpeg
